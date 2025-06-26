@@ -1,36 +1,238 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Stack NextJS
 
-## Getting Started
+A comprehensive Next.js application built with TypeScript, Tailwind CSS, Jest, and Playwright. This project demonstrates modern web development practices with a focus on accessibility, testing, and maintainable code.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Tech Stack:** Next.js 15, TypeScript, Tailwind CSS
+- **Comprehensive Testing:** Jest for unit tests, Playwright for E2E tests
+- **Accessibility First:** ARIA labels, keyboard navigation, screen reader support
+- **Responsive Design:** Mobile-first approach with Tailwind CSS
+- **Component Library:** Reusable UI components with TypeScript interfaces
+- **Mock API Services:** Simulated backend with realistic data
+- **Environment Configuration:** Type-safe environment variables
+- **Documentation:** Comprehensive docs for all aspects
+
+## 📋 Requirements
+
+- Node.js 18+ 
+- npm or yarn
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ai-stack-nextjs-bh
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp env.example .env.local
+   # Edit .env.local with your configuration
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🧪 Testing
+
+### Unit Tests
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Run all unit tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### E2E Tests
+```bash
+# Run all E2E tests
+npm run test:e2e
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Run E2E tests with UI
+npm run test:e2e:ui
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📚 Documentation
 
-## Learn More
+- **[API Documentation](docs/API.md)** - API contracts and service documentation
+- **[Component Library](docs/COMPONENTS.md)** - UI components and usage guidelines
+- **[Testing Guidelines](docs/TESTING.md)** - Testing strategy and best practices
+- **[AI Prompts](docs/PROMPTS.md)** - All AI prompts used to build this project
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── globals.css        # Global styles and CSS variables
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   ├── layout/           # Layout components
+│   ├── tickets/          # Ticket-related components
+│   └── services/         # Service-related components
+├── api/                  # API and data layer
+│   ├── data/            # Mock JSON data
+│   └── services/        # Service classes
+├── config/              # Configuration files
+│   ├── constants.ts     # Application constants
+│   └── env.ts          # Environment configuration
+└── types/               # TypeScript type definitions
+    ├── components.ts    # Component prop types
+    └── env.d.ts        # Environment variable types
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design System
 
-## Deploy on Vercel
+### Color Palette
+- **Primary:** Blue (#3b82f6)
+- **Secondary:** Gray (#6b7280)
+- **Success:** Green (#10b981)
+- **Warning:** Yellow (#f59e0b)
+- **Danger:** Red (#ef4444)
+- **Info:** Cyan (#06b6d4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Components
+- **Button:** Multiple variants and sizes
+- **Card:** Content containers with options
+- **Badge:** Status and priority indicators
+- **Accordion:** Collapsible content sections
+- **Avatar:** User profile images
+- **Dropdown:** Menu components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Configuration
+
+### Environment Variables
+All configuration is managed through environment variables:
+
+```bash
+# Application
+NEXT_PUBLIC_APP_NAME=AI Stack NextJS
+NEXT_PUBLIC_APP_VERSION=1.0.0
+
+# API
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
+NEXT_PUBLIC_API_TIMEOUT=5000
+
+# Feature Flags
+NEXT_PUBLIC_ENABLE_ANALYTICS=false
+NEXT_PUBLIC_ENABLE_DEBUG_MODE=false
+```
+
+### Tailwind Configuration
+Custom colors and animations are defined in `tailwind.config.ts` and use CSS custom properties for easy theming.
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+```bash
+# Build the application
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📱 Responsive Design
+
+The application is fully responsive with:
+- Mobile-first design approach
+- Breakpoint system: sm, md, lg, xl, 2xl
+- Flexible grid layouts
+- Touch-friendly interactions
+
+## ♿ Accessibility
+
+- **ARIA Labels:** All interactive elements have proper labels
+- **Keyboard Navigation:** Full keyboard support
+- **Screen Reader:** Compatible with screen readers
+- **Color Contrast:** WCAG compliant color combinations
+- **Focus Management:** Visible focus indicators
+
+## 🧪 Testing Strategy
+
+### Unit Testing (100% Coverage)
+- Component rendering and interactions
+- Service methods and data handling
+- Utility functions and helpers
+- Accessibility features
+
+### E2E Testing (100% Coverage)
+- User workflows and journeys
+- Cross-browser compatibility
+- Mobile responsiveness
+- Accessibility testing
+
+## 🔄 Development Workflow
+
+1. **Feature Development**
+   - Create feature branch
+   - Implement with tests
+   - Ensure accessibility
+   - Update documentation
+
+2. **Testing**
+   - Run unit tests
+   - Run E2E tests
+   - Check coverage
+   - Test accessibility
+
+3. **Code Quality**
+   - Lint code
+   - Type check
+   - Review accessibility
+   - Update docs
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Testing Library for excellent testing utilities
+- Playwright for powerful E2E testing
+- Lucide React for beautiful icons
+
+## 📞 Support
+
+For questions or issues:
+- Check the documentation in the `docs/` folder
+- Review the AI prompts in `docs/PROMPTS.md`
+- Open an issue on GitHub
+
+---
+
+**Built with ❤️ using modern web technologies**

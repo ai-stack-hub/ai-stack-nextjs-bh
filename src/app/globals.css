@@ -1,8 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Default color variables */
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #06b6d4;
+  --color-light: #f8fafc;
+  --color-dark: #1e293b;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  
+  /* Layout constants */
+  --header-height: 64px;
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 64px;
+  --banner-height: 60px;
+  
+  /* Animation durations */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
 }
 
 @theme inline {
@@ -14,13 +42,58 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+    --color-light: #1e293b;
+    --color-dark: #f8fafc;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Accessibility improvements */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark);
 }

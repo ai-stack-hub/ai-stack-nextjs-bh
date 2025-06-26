@@ -1,0 +1,58 @@
+- Tack stack : NextJs, Tpescript, Tailwind, Jest, Playwright
+- UI Requirments
+    - Configuration
+      - Tailwind config should be accept primary color, secondary color, success color, warning color, danger color, info color, light color, dark color from the user and it should be used in the application.
+      - Entire application should use config and constants. No magic numbers or strings should be used in the application.
+      - Create dummy json for all the api services and the same can use for testing
+      - Write unit test cases and achive 100% code coverage
+      - Write Playwright cases for e-2-e testing and achive 100% code coverage
+      - Should have all bacis accessibility features like screen reader, keyboard navigation, etc.
+      - Create each component and treat it like a library and use it in the application.
+      - No code duplication
+      - Put ; color whereever required.
+      - Create docs folder maintain all required info in seperate files in .md format
+      - Maintain well readme.md in root level with link to docs.
+      - Maintain all final AI promt for referance in docs folder.
+      - Declare type/props for functions and mainatin in separate files in the same component folder.
+      - No hard coded secrets/keys should be used in the application and those should be stored in .env.local file.
+      - Create SVG  fo all icon and maintain like a library
+      - All app should be response and use tailwind class to handle it
+    - Application layout
+      - Header position in fixed top
+      - Header shuld have profile image and name in the right side, and arrow iocn that open list of option like account details and logout.
+      - Side bar should be on the left side of the screen and it should have the following options:
+         - Home
+      - Side bar is fixed in left side and it should collapse by default with the options with a icon. When mouse over on the sidebar it should expand and show the options with the icon and text.
+      - A banner underneth the header and its hsould show the welcome message for the user and the banner information is dynamic based on th page. 
+      - Banner is scrollable
+    - Page 1 (Home)
+      - Two columns layout undernath the banner (Column 1 is span7 and Column 2 is span5)
+      - Left column is for the list of tickets
+        - Ticket list should have the following details:
+          - Ticket ID
+          - Ticket Title
+          - Ticket Description
+          - Ticket Status
+          - Ticket Priority
+          - Ticket Created At
+          - Ticket Updated At
+      - Right column is for the my serviced which contain list of external services like Google, Facebook, etc.
+        - Each service should have the following details:
+          - Service Name
+          - Service Icon
+          - Service Description
+          - Service Status
+        - The list Should be in accrodian and each group head title should be clickable and it should expand the list (accrodian) for example:
+          - Google
+            - Google Service 1
+            - Google Service 2
+            - Google Service 3
+          - Facebook
+            - Facebook Service 1
+            - Facebook Service 2
+            - Facebook Service 3
+      - API service
+        - Use mock json for all datas and maintain in api/data folder.
+        - All json contract should be will maintained in docs folder
+        - Josn should not have any real names and email. Use test, dummy etc keys
+           
