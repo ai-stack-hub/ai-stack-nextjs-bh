@@ -38,6 +38,7 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div
+      data-testid="card"
       className={classes}
       aria-label={ariaLabel}
       aria-describedby={ariaDescribedby}

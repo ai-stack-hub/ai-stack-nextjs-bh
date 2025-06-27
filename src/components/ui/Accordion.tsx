@@ -96,6 +96,7 @@ const Accordion: React.FC<AccordionProps> = ({
                 isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               )}
               aria-hidden={!isOpen}
+              style={{ display: isOpen ? 'block' : 'none' }}
             >
               <div className="px-4 pb-3 pt-1">
                 {item.content}

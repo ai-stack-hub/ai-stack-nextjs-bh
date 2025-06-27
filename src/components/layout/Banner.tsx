@@ -38,6 +38,7 @@ const Banner: React.FC<BannerProps> = ({
 
   return (
     <div
+      data-testid="banner"
       className={clsx(
         'relative overflow-hidden',
         variantClasses[variant],
