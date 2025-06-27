@@ -81,8 +81,8 @@ const Badge: React.FC<BadgeProps> = ({
 
   const getLabel = () => {
     if (children) return children;
-    if (status) return status.replace('_', ' ');
-    if (priority) return priority;
+    if (status) return status.replace('_', ' ').toLowerCase();
+    if (priority) return priority.toLowerCase();
     return '';
   };
 

@@ -63,7 +63,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-label={ariaLabel}
       aria-describedby={ariaDescribedby}
       aria-labelledby={ariaLabelledby}
-      tabIndex={disabled ? -1 : 0}
+      tabIndex={disabled || loading ? -1 : 0}
       {...props}
     >
       {loading && (
@@ -73,6 +73,8 @@ const Button: React.FC<ButtonProps> = ({
           fill="none"
           viewBox="0 0 24 24"
           aria-hidden="true"
+          role="img"
+          aria-label="Loading"
         >
           <circle
             className="opacity-25"
