@@ -53,6 +53,6 @@
             - Facebook Service 3
       - API service
         - Use mock json for all datas and maintain in api/data folder.
-        - All json contract should be will maintained in docs folder
+        - All json contract should be well maintained in docs folder
         - Josn should not have any real names and email. Use test, dummy etc keys
            
