@@ -1,7 +1,8 @@
 import React from 'react';
 import { cn } from '../../utils/cn';
-import { MenuIcon, UserIcon, ChevronDownIcon } from '../../icons';
+import { UserIcon, ChevronDownIcon } from '../../icons';
 import { APP_CONFIG, LAYOUT_CONFIG } from '../../constants';
+import Image from 'next/image';
 
 export interface HeaderProps {
   onMenuClick?: () => void;
@@ -18,14 +19,16 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, className = '' }) => {
       style={{ height: LAYOUT_CONFIG.header.height }}
     >
       <div className="flex items-center justify-between h-full px-4">
-        {/* Left side - Menu button */}
-        <button
-          onClick={onMenuClick}
-          className="p-2 rounded-md hover:bg-sidebar-hover transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
-          aria-label="Toggle menu"
-        >
-          <MenuIcon size={24} color="currentColor" />
-        </button>
+        {/* Left side - Logo */}
+        <div className="flex items-center">
+          <Image
+            src="/logos/logo.png"
+            alt="Logo"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
+        </div>
 
         {/* Right side - User profile */}
         <div className="flex items-center space-x-3">
