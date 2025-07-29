@@ -10,7 +10,7 @@ const Banner: React.FC<BannerProps> = ({ className = '' }) => {
   return (
     <div
       className={cn(
-        'bg-banner-bg text-white p-6 rounded-lg w-full',
+        'bg-banner-bg text-white p-6 mb-6 w-full',
         className
       )}
     >

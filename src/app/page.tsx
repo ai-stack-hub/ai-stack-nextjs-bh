@@ -13,13 +13,11 @@ import { Service } from '../lib/widgets/services-widget/services-widget.types';
 export default function HomePage() {
   return (
     <Layout>
+      {/* Welcome Banner - Full width */}
+      <Banner />
+      
+      {/* Main Content Grid - With padding */}
       <div className="p-6">
-        {/* Welcome Banner */}
-        <div className="mb-6">
-          <Banner />
-        </div>
-        
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Tickets Widget - Takes 2 columns on large screens */}
           <div className="lg:col-span-2">
