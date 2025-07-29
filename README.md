@@ -119,6 +119,18 @@ npx serve out
 - **Image Optimization**: Disabled for static export compatibility
 - **Trailing Slashes**: Enabled for consistent routing
 
+#### Troubleshooting:
+
+**LightningCSS Binary Error**: If you encounter `Cannot find module '../lightningcss.linux-x64-gnu.node'` during build:
+
+1. **Local Development**: Run `npm rebuild lightningcss` to rebuild binaries
+2. **CI/CD**: The GitHub Actions workflow automatically handles this
+3. **Alternative**: Use `npm ci --legacy-peer-deps` for installation
+
+**Build Issues**: 
+- Clear npm cache: `npm cache clean --force`
+- Reinstall dependencies: `rm -rf node_modules package-lock.json && npm install`
+
 ## 📚 Documentation
 
 - [API Contracts](./docs/api-contracts.md) - JSON data structure documentation
