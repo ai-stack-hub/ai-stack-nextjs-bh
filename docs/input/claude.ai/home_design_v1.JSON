@@ -1,0 +1,127 @@
+{
+  "dashboard": {
+    "user": {
+      "name": "John Doe",
+      "initials": "JD"
+    },
+    "header": {
+      "title": "Welcome, John",
+      "subtitle": "Here is a summary of your dashboard."
+    },
+    "navigation": {
+      "sidebar": [
+        {
+          "icon": "home",
+          "label": "Home",
+          "active": true
+        },
+        {
+          "icon": "tickets",
+          "label": "Tickets",
+          "active": false
+        }
+      ]
+    },
+    "main_content": {
+      "tickets_section": {
+        "title": "Tickets",
+        "search": {
+          "placeholder": "Search tickets...",
+          "enabled": true
+        },
+        "controls": [
+          {
+            "type": "button",
+            "label": "Filter",
+            "style": "dark"
+          },
+          {
+            "type": "button",
+            "label": "Sort",
+            "style": "dark"
+          }
+        ],
+        "tickets": [
+          {
+            "id": "TKT-001",
+            "title": "Issue with login",
+            "description": "User is unable to log in to their account. Receiving an 'Invalid Credentials' error despite using the correct password.",
+            "status": "Open",
+            "status_color": "green",
+            "priority": "High",
+            "priority_color": "red",
+            "created_at": "2023-10-27 09:15",
+            "updated_at": "2023-10-27 11:30"
+          },
+          {
+            "id": "TKT-002",
+            "title": "Cannot access files",
+            "description": "User reports being unable to access files in the shared drive. Permission denied error is displayed.",
+            "status": "Open",
+            "status_color": "green",
+            "priority": "Medium",
+            "priority_color": "orange",
+            "created_at": "2023-10-26 14:00",
+            "updated_at": "2023-10-26 16:45"
+          },
+          {
+            "id": "TKT-003",
+            "title": "Password reset request",
+            "description": "User requested a password reset. The reset link was sent and the user has confirmed they have successfully reset their password.",
+            "status": "Closed",
+            "status_color": "red",
+            "priority": "Low",
+            "priority_color": "yellow",
+            "created_at": "2023-10-24 11:20",
+            "updated_at": "2023-10-24 11:55"
+          }
+        ]
+      }
+    },
+    "sidebar_right": {
+      "my_services": {
+        "title": "My Services",
+        "services": [
+          {
+            "name": "Google",
+            "expandable": true,
+            "expanded": false
+          },
+          {
+            "name": "Facebook",
+            "expandable": true,
+            "expanded": false
+          },
+          {
+            "name": "Microsoft",
+            "expandable": true,
+            "expanded": false
+          },
+          {
+            "name": "Slack",
+            "expandable": true,
+            "expanded": false
+          },
+          {
+            "name": "GitLab",
+            "expandable": true,
+            "expanded": false
+          }
+        ]
+      }
+    },
+    "theme": {
+      "primary_color": "#2d7d4f",
+      "background_color": "#ffffff",
+      "sidebar_color": "#f5f5f5",
+      "text_primary": "#333333",
+      "text_secondary": "#666666"
+    },
+    "layout": {
+      "type": "three_column",
+      "sidebar_left": "navigation",
+      "main_content": "tickets",
+      "sidebar_right": "services"
+    }
+  }
+}
