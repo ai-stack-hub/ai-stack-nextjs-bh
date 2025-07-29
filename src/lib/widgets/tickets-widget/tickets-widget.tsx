@@ -81,11 +81,14 @@ const TicketsWidget: React.FC<TicketsWidgetProps> = ({ tickets, className = '' }
       </div>
 
       {/* Tickets List */}
-      <div className="space-y-4">
-        {filteredTickets.map((ticket) => (
+      <div className="space-y-0">
+        {filteredTickets.map((ticket, index) => (
           <div
             key={ticket.id}
-            className="border border-border p-4 hover:border-primary/30 transition-colors"
+            className={cn(
+              "p-4 hover:bg-gray-50 transition-colors",
+              index < filteredTickets.length - 1 && "border-b border-border"
+            )}
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">

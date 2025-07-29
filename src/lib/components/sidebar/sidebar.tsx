@@ -38,16 +38,16 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
             href={item.href}
             className={cn(
               'flex items-center justify-center px-3 py-2 rounded-md transition-colors duration-200',
-              'hover:bg-sidebar-hover focus:outline-none focus:ring-2 focus:ring-primary/20',
+              'hover:bg-[#22d081] focus:outline-none focus:ring-2 focus:ring-primary/20',
               'group-hover:justify-start group-hover:space-x-3',
-              item.id === 'home' && 'bg-sidebar-hover'
+              item.id === 'home' && 'bg-[#22d081]'
             )}
             aria-label={item.label}
           >
             <span className="flex-shrink-0 flex items-center justify-center">
               {getIcon(item.icon)}
             </span>
-            <span className="text-sm font-medium text-text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+            <span className="text-sm font-medium text-text-primary hidden group-hover:block transition-all duration-200 whitespace-nowrap">
               {item.label}
             </span>
           </a>
