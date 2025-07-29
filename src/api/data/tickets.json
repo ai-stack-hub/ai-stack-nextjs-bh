@@ -1,0 +1,59 @@
+{
+  "tickets": [
+    {
+      "id": "TKT-001",
+      "title": "Issue with login",
+      "description": "User is unable to log in to their account. Receiving an \"Invalid Credentials\" error despite using the correct password.",
+      "status": "open",
+      "priority": "high",
+      "createdAt": "2023-10-27T09:15:00Z",
+      "updatedAt": "2023-10-27T11:30:00Z",
+      "assignedTo": "test.user@example.com",
+      "category": "Authentication"
+    },
+    {
+      "id": "TKT-002",
+      "title": "Cannot access files",
+      "description": "User reports being unable to access files in the shared drive. Permission denied error is displayed.",
+      "status": "open",
+      "priority": "medium",
+      "createdAt": "2023-10-26T14:00:00Z",
+      "updatedAt": "2023-10-26T16:45:00Z",
+      "assignedTo": "dummy.user@example.com",
+      "category": "File Access"
+    },
+    {
+      "id": "TKT-003",
+      "title": "Password reset request",
+      "description": "User requested a password reset. The reset link was sent and the user has confirmed they have successfully reset their password.",
+      "status": "closed",
+      "priority": "low",
+      "createdAt": "2023-10-24T11:20:00Z",
+      "updatedAt": "2023-10-24T11:55:00Z",
+      "assignedTo": "support.user@example.com",
+      "category": "Password Reset"
+    },
+    {
+      "id": "TKT-004",
+      "title": "Email configuration issue",
+      "description": "User is having trouble configuring their email client. SMTP settings are not being accepted.",
+      "status": "pending",
+      "priority": "medium",
+      "createdAt": "2023-10-25T10:30:00Z",
+      "updatedAt": "2023-10-25T15:20:00Z",
+      "assignedTo": "tech.user@example.com",
+      "category": "Email"
+    },
+    {
+      "id": "TKT-005",
+      "title": "Software installation problem",
+      "description": "User is unable to install the required software. Installation process fails at 75% completion.",
+      "status": "inProgress",
+      "priority": "high",
+      "createdAt": "2023-10-23T08:45:00Z",
+      "updatedAt": "2023-10-26T09:15:00Z",
+      "assignedTo": "admin.user@example.com",
+      "category": "Software"
+    }
+  ]
+} 

@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "id": "google",
+      "name": "Google",
+      "status": "active",
+      "lastAccessed": "2023-10-27T10:30:00Z",
+      "description": "Google Workspace services including Gmail, Drive, and Calendar"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "status": "active",
+      "lastAccessed": "2023-10-26T15:45:00Z",
+      "description": "Facebook social media platform and business tools"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "status": "active",
+      "lastAccessed": "2023-10-27T08:20:00Z",
+      "description": "Microsoft 365 services including Office, Teams, and OneDrive"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "status": "active",
+      "lastAccessed": "2023-10-27T12:15:00Z",
+      "description": "Slack team communication and collaboration platform"
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "status": "active",
+      "lastAccessed": "2023-10-25T14:30:00Z",
+      "description": "GitLab code repository and CI/CD platform"
+    }
+  ]
+} 

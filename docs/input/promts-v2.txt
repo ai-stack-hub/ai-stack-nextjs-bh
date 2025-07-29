@@ -15,7 +15,10 @@
       - Declare type/props for functions and mainatin in separate files in the same component folder.
       - No hard coded secrets/keys should be used in the application and those should be stored in .env.local file.
       - Create SVG fo all icon and maintain like a library
-      - All app should be response and use tailwind class to handle it
+      - Application should be responsive and use tailwind class to handle it.
+      - Always use kebab-case for all file and folder names
+      - Alwyas check the latest documentation of the frameworks based on version
+      - Go with latest tailwind process without tailwind.config file
    - Application layout
       - Create layout by following the attached home layout images with pixel pefect match
       - Header position in fixed top
