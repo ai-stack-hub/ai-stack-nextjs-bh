@@ -15,7 +15,7 @@ describe('Banner', () => {
 
   it('applies custom className', () => {
     render(<Banner className="custom-class" />);
-    const banner = screen.getByText(/Welcome, John/).closest('div');
+    const banner = screen.getByText(/Welcome, John/).parentElement?.parentElement;
     expect(banner).toHaveClass('custom-class');
   });
 
@@ -24,5 +24,11 @@ describe('Banner', () => {
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent(/Welcome, John/);
+  });
+
+  it('has correct styling classes', () => {
+    render(<Banner />);
+    const banner = screen.getByText(/Welcome, John/).parentElement?.parentElement;
+    expect(banner).toHaveClass('bg-banner-bg', 'text-white', 'pt-6', 'pb-28', 'w-full');
   });
 }); 

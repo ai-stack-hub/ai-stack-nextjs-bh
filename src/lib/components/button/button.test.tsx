@@ -12,7 +12,7 @@ describe('Button', () => {
 
   it('renders with different variants', () => {
     const { rerender } = render(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-secondary');
+    expect(screen.getByRole('button')).toHaveClass('bg-button-bg');
 
     rerender(<Button variant="success">Success</Button>);
     expect(screen.getByRole('button')).toHaveClass('bg-success');
@@ -29,13 +29,13 @@ describe('Button', () => {
 
   it('renders with different sizes', () => {
     const { rerender } = render(<Button size="sm">Small</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-8');
+    expect(screen.getByRole('button')).toHaveClass('px-3', 'py-1.5', 'text-sm');
 
     rerender(<Button size="md">Medium</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-10');
+    expect(screen.getByRole('button')).toHaveClass('px-4', 'py-2', 'text-sm');
 
     rerender(<Button size="lg">Large</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-12');
+    expect(screen.getByRole('button')).toHaveClass('px-6', 'py-3', 'text-base');
   });
 
   it('applies custom className', () => {
