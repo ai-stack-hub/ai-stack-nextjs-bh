@@ -34,17 +34,12 @@ jobs:
         run: npm cache clean --force
       
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm i
       
       - name: Setup environment
         run: |
           export NODE_ENV=production
           export NEXT_TELEMETRY_DISABLED=1
-      
-      - name: Rebuild lightningcss binaries
-        run: |
-          npm rebuild lightningcss
-          npm rebuild @tailwindcss/postcss
       
       - name: Build with Next.js
         run: npm run build
