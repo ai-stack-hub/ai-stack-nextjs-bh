@@ -1,209 +1,197 @@
-# AI Stack NextJS
+# Dashboard Application
 
-A comprehensive Next.js application built with TypeScript, Tailwind CSS, Jest, and Playwright. This project demonstrates modern web development practices with a focus on accessibility, testing, and maintainable code.
+A modern, responsive dashboard built with Next.js, TypeScript, and Tailwind CSS.
 
-## 🚀 Features
+## 🚀 Tech Stack
 
-- **Modern Tech Stack:** Next.js 15, TypeScript, Tailwind CSS
-- **Comprehensive Testing:** Jest for unit tests, Playwright for E2E tests
-- **Accessibility First:** ARIA labels, keyboard navigation, screen reader support
-- **Responsive Design:** Mobile-first approach with Tailwind CSS
-- **Component Library:** Reusable UI components with TypeScript interfaces
-- **Mock API Services:** Simulated backend with realistic data
-- **Environment Configuration:** Type-safe environment variables
-- **Documentation:** Comprehensive docs for all aspects
+- **Framework**: Next.js 15.4.4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Testing**: Jest + React Testing Library
+- **Icons**: Custom SVG icon library
 
-## 📋 Requirements
+## ✨ Features
+
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Accessibility**: Full keyboard navigation and screen reader support
+- **Component Library**: Reusable UI components with TypeScript
+- **Mock Data**: Complete API simulation with JSON data
+- **Testing**: 100% code coverage target with Jest
+- **Modern UI**: Clean, professional dashboard interface
+
+## 🎨 Design
+
+The application follows a pixel-perfect design matching the provided layout with:
+- Fixed header with user profile
+- Collapsible sidebar navigation
+- Welcome banner
+- Tickets management widget
+- Services overview widget
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                 # Next.js app directory
+├── lib/                 # Reusable libraries
+│   ├── components/      # UI components
+│   ├── widgets/         # Dashboard widgets
+│   ├── icons/           # SVG icon library
+│   ├── constants/       # Configuration constants
+│   └── utils/           # Utility functions
+├── api/                 # Mock API data
+└── docs/                # Documentation
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
 
 - Node.js 18+ 
 - npm or yarn
 
-## 🛠️ Installation
+### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd ai-stack-nextjs-bh
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🧪 Testing
-
-### Unit Tests
+1. Clone the repository
 ```bash
-# Run all unit tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run tests with coverage
-npm run test:coverage
+git clone <repository-url>
+cd ai-stack-nextjs-bh
 ```
 
-### E2E Tests
+2. Install dependencies
 ```bash
-# Run all E2E tests
-npm run test:e2e
-
-# Run E2E tests with UI
-npm run test:e2e:ui
+npm install
 ```
+
+3. Run the development server
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage report
+
+## 🌐 Deployment
+
+### GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings
+   - Navigate to "Pages" in the sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Repository Configuration**:
+   - Ensure your repository is public (or you have GitHub Pro for private repos)
+   - The workflow will automatically deploy on pushes to the `main` branch
+
+3. **Automatic Deployment**:
+   - Push to the `main` branch triggers the deployment
+   - The app will be available at: `https://<username>.github.io/ai-stack-nextjs-bh/`
+
+#### Manual Deployment:
+
+```bash
+# Build the project
+npm run build
+
+# The static files will be generated in the `out` directory
+# You can serve them locally to test:
+npx serve out
+```
+
+#### Deployment Configuration:
+
+- **Static Export**: Configured for static site generation
+- **Base Path**: Automatically set for GitHub Pages subdirectory
+- **Image Optimization**: Disabled for static export compatibility
+- **Trailing Slashes**: Enabled for consistent routing
 
 ## 📚 Documentation
 
-- **[API Documentation](docs/API.md)** - API contracts and service documentation
-- **[Component Library](docs/COMPONENTS.md)** - UI components and usage guidelines
-- **[Testing Guidelines](docs/TESTING.md)** - Testing strategy and best practices
-- **[AI Prompts](docs/PROMPTS.md)** - All AI prompts used to build this project
+- [API Contracts](./docs/api-contracts.md) - JSON data structure documentation
+- [Component Library](./docs/component-library.md) - Reusable components guide
+- [AI Prompts](./docs/prompts-v2.md) - Development prompts and requirements
 
-## 🏗️ Project Structure
+## 🎯 Key Features
 
-```
-src/
-├── app/                    # Next.js app directory
-│   ├── globals.css        # Global styles and CSS variables
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # React components
-│   ├── ui/               # Reusable UI components
-│   ├── layout/           # Layout components
-│   ├── tickets/          # Ticket-related components
-│   └── services/         # Service-related components
-├── api/                  # API and data layer
-│   ├── data/            # Mock JSON data
-│   └── services/        # Service classes
-├── config/              # Configuration files
-│   ├── constants.ts     # Application constants
-│   └── env.ts          # Environment configuration
-└── types/               # TypeScript type definitions
-    ├── components.ts    # Component prop types
-    └── env.d.ts        # Environment variable types
-```
+### Layout Components
+- **Header**: Fixed top navigation with menu and user profile
+- **Sidebar**: Collapsible navigation with hover expansion
+- **Banner**: Welcome message component
+- **Layout**: Main wrapper component
 
-## 🎨 Design System
+### Widgets
+- **Tickets Widget**: Support ticket management with search and filtering
+- **Services Widget**: User services overview with expandable details
 
-### Color Palette
-- **Primary:** Blue (#3b82f6)
-- **Secondary:** Gray (#6b7280)
-- **Success:** Green (#10b981)
-- **Warning:** Yellow (#f59e0b)
-- **Danger:** Red (#ef4444)
-- **Info:** Cyan (#06b6d4)
+### UI Components
+- **Button**: Multi-variant button component
+- **StatusBadge**: Status indicator with color coding
+- **PriorityBadge**: Priority level indicator
+- **Icons**: Complete SVG icon library
 
-### Components
-- **Button:** Multiple variants and sizes
-- **Card:** Content containers with options
-- **Badge:** Status and priority indicators
-- **Accordion:** Collapsible content sections
-- **Avatar:** User profile images
-- **Dropdown:** Menu components
+## 🧪 Testing
 
-## 🔧 Configuration
-
-### Environment Variables
-All configuration is managed through environment variables:
+The application includes comprehensive testing setup:
 
 ```bash
-# Application
-NEXT_PUBLIC_APP_NAME=AI Stack NextJS
-NEXT_PUBLIC_APP_VERSION=1.0.0
+# Run all tests
+npm test
 
-# API
-NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
-NEXT_PUBLIC_API_TIMEOUT=5000
+# Run tests with coverage
+npm run test:coverage
 
-# Feature Flags
-NEXT_PUBLIC_ENABLE_ANALYTICS=false
-NEXT_PUBLIC_ENABLE_DEBUG_MODE=false
+# Run tests in watch mode
+npm run test:watch
 ```
-
-### Tailwind Configuration
-Custom colors and animations are defined in `tailwind.config.ts` and use CSS custom properties for easy theming.
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-```bash
-# Build the application
-npm run build
-
-# Start production server
-npm start
-```
-
-## 📱 Responsive Design
-
-The application is fully responsive with:
-- Mobile-first design approach
-- Breakpoint system: sm, md, lg, xl, 2xl
-- Flexible grid layouts
-- Touch-friendly interactions
 
 ## ♿ Accessibility
 
-- **ARIA Labels:** All interactive elements have proper labels
-- **Keyboard Navigation:** Full keyboard support
-- **Screen Reader:** Compatible with screen readers
-- **Color Contrast:** WCAG compliant color combinations
-- **Focus Management:** Visible focus indicators
+- ARIA labels and roles
+- Keyboard navigation support
+- Focus management
+- Screen reader compatibility
+- Color contrast compliance
+- Semantic HTML structure
 
-## 🧪 Testing Strategy
+## 🎨 Customization
 
-### Unit Testing (100% Coverage)
-- Component rendering and interactions
-- Service methods and data handling
-- Utility functions and helpers
-- Accessibility features
+### Colors
+The application uses a configurable color scheme defined in `src/app/globals.css`:
 
-### E2E Testing (100% Coverage)
-- User workflows and journeys
-- Cross-browser compatibility
-- Mobile responsiveness
-- Accessibility testing
+- Primary: #1f2937
+- Secondary: #6b7280
+- Success: #10b981
+- Warning: #f59e0b
+- Danger: #ef4444
+- Info: #3b82f6
+- Light: #f9fafb
+- Dark: #111827
 
-## 🔄 Development Workflow
+### Constants
+All configuration values are stored in `src/lib/constants/index.ts` to avoid magic numbers and strings.
 
-1. **Feature Development**
-   - Create feature branch
-   - Implement with tests
-   - Ensure accessibility
-   - Update documentation
+## 📝 Development Guidelines
 
-2. **Testing**
-   - Run unit tests
-   - Run E2E tests
-   - Check coverage
-   - Test accessibility
-
-3. **Code Quality**
-   - Lint code
-   - Type check
-   - Review accessibility
-   - Update docs
+- Use kebab-case for all file and folder names
+- Maintain separate type files for each component
+- Follow TypeScript best practices
+- Ensure 100% test coverage
+- Use Tailwind CSS for styling
+- Implement proper accessibility features
 
 ## 🤝 Contributing
 
@@ -217,22 +205,3 @@ The application is fully responsive with:
 ## 📄 License
 
 This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- Testing Library for excellent testing utilities
-- Playwright for powerful E2E testing
-- Lucide React for beautiful icons
-
-## 📞 Support
-
-For questions or issues:
-- Check the documentation in the `docs/` folder
-- Review the AI prompts in `docs/PROMPTS.md`
-- Open an issue on GitHub
-
----
-
-**Built with ❤️ using modern web technologies**

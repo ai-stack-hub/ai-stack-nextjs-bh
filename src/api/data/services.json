@@ -1,177 +1,39 @@
-[
-  {
-    "provider": "Google",
-    "services": [
-      {
-        "id": "google-1",
-        "name": "Google Drive",
-        "description": "Cloud storage and file sharing service",
-        "icon": "Cloud",
-        "status": "active",
-        "provider": "Google",
-        "url": "https://drive.google.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "google-2",
-        "name": "Gmail",
-        "description": "Email service with advanced features",
-        "icon": "Mail",
-        "status": "active",
-        "provider": "Google",
-        "url": "https://gmail.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "google-3",
-        "name": "Google Calendar",
-        "description": "Calendar and scheduling service",
-        "icon": "Calendar",
-        "status": "maintenance",
-        "provider": "Google",
-        "url": "https://calendar.google.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "google-4",
-        "name": "Google Analytics",
-        "description": "Web analytics and reporting service",
-        "icon": "BarChart",
-        "status": "active",
-        "provider": "Google",
-        "url": "https://analytics.google.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      }
-    ]
-  },
-  {
-    "provider": "Facebook",
-    "services": [
-      {
-        "id": "facebook-1",
-        "name": "Facebook Pages",
-        "description": "Business page management and analytics",
-        "icon": "Facebook",
-        "status": "active",
-        "provider": "Facebook",
-        "url": "https://facebook.com/pages",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "facebook-2",
-        "name": "Facebook Ads",
-        "description": "Advertising platform and campaign management",
-        "icon": "DollarSign",
-        "status": "active",
-        "provider": "Facebook",
-        "url": "https://facebook.com/ads",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "facebook-3",
-        "name": "Instagram Business",
-        "description": "Instagram business account and insights",
-        "icon": "Instagram",
-        "status": "error",
-        "provider": "Facebook",
-        "url": "https://instagram.com/business",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      }
-    ]
-  },
-  {
-    "provider": "Microsoft",
-    "services": [
-      {
-        "id": "microsoft-1",
-        "name": "Microsoft 365",
-        "description": "Productivity suite with Office applications",
-        "icon": "Briefcase",
-        "status": "active",
-        "provider": "Microsoft",
-        "url": "https://office.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "microsoft-2",
-        "name": "Azure Cloud",
-        "description": "Cloud computing and hosting services",
-        "icon": "Cloud",
-        "status": "active",
-        "provider": "Microsoft",
-        "url": "https://azure.microsoft.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "microsoft-3",
-        "name": "Teams",
-        "description": "Team collaboration and communication platform",
-        "icon": "Users",
-        "status": "maintenance",
-        "provider": "Microsoft",
-        "url": "https://teams.microsoft.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      }
-    ]
-  },
-  {
-    "provider": "Slack",
-    "services": [
-      {
-        "id": "slack-1",
-        "name": "Slack Workspace",
-        "description": "Team communication and collaboration platform",
-        "icon": "MessageSquare",
-        "status": "active",
-        "provider": "Slack",
-        "url": "https://slack.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "slack-2",
-        "name": "Slack API",
-        "description": "Integration and automation services",
-        "icon": "Code",
-        "status": "active",
-        "provider": "Slack",
-        "url": "https://api.slack.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      }
-    ]
-  },
-  {
-    "provider": "GitHub",
-    "services": [
-      {
-        "id": "github-1",
-        "name": "GitHub Repository",
-        "description": "Code repository and version control",
-        "icon": "GitBranch",
-        "status": "active",
-        "provider": "GitHub",
-        "url": "https://github.com",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "github-2",
-        "name": "GitHub Actions",
-        "description": "CI/CD and automation workflows",
-        "icon": "Play",
-        "status": "active",
-        "provider": "GitHub",
-        "url": "https://github.com/features/actions",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      },
-      {
-        "id": "github-3",
-        "name": "GitHub Packages",
-        "description": "Package registry and distribution",
-        "icon": "Package",
-        "status": "inactive",
-        "provider": "GitHub",
-        "url": "https://github.com/features/packages",
-        "lastChecked": "2024-01-15T15:30:00Z"
-      }
-    ]
-  }
-] 
+{
+  "services": [
+    {
+      "id": "google",
+      "name": "Google",
+      "status": "active",
+      "lastAccessed": "2023-10-27T10:30:00Z",
+      "description": "Google Workspace services including Gmail, Drive, and Calendar"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "status": "active",
+      "lastAccessed": "2023-10-26T15:45:00Z",
+      "description": "Facebook social media platform and business tools"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "status": "active",
+      "lastAccessed": "2023-10-27T08:20:00Z",
+      "description": "Microsoft 365 services including Office, Teams, and OneDrive"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "status": "active",
+      "lastAccessed": "2023-10-27T12:15:00Z",
+      "description": "Slack team communication and collaboration platform"
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "status": "active",
+      "lastAccessed": "2023-10-25T14:30:00Z",
+      "description": "GitLab code repository and CI/CD platform"
+    }
+  ]
+} 

@@ -1,0 +1,39 @@
+- Tack stack : NextJs, Tpescript, Tailwind, Jest
+- UI Requirments
+   - Configuration
+      - Tailwind config should be accept primary color, secondary color, success color, warning color, danger color, info color, light color, dark color from the user and it should be used in the application.
+      - Entire application should use config and constants. No magic numbers or strings should be used in the application.
+      - Create dummy json for all the api services and the same can use for testing
+      - Write unit test cases and achive 100% code coverage
+      - Should have all bacis accessibility features like screen reader, keyboard navigation, etc.
+      - Create each component as a separate library and use it within the application. Ensure the lib folder contains all reusable libraries (e.g., buttons, chips, utility classes, etc.).
+      - No code duplication
+      - Put ; color whereever required.
+      - Create docs folder maintain all required info in seperate files in .md format
+      - Maintain the basic app details and detailed documentation link in the root readme.md file.
+      - Maintain all final AI prompts along with the model name used to generate the code, and save them in the docs folder under the filename prompts-v2.md
+      - Declare type/props for functions and mainatin in separate files in the same component folder.
+      - No hard coded secrets/keys should be used in the application and those should be stored in .env.local file.
+      - Create SVG fo all icon and maintain like a library
+      - Application should be responsive and use tailwind class to handle it.
+      - Always use kebab-case for all file and folder names
+      - Alwyas check the latest documentation of the frameworks based on version
+      - Go with latest tailwind process without tailwind.config file
+   - Application layout
+      - Create layout by following the attached home layout images with pixel pefect match
+      - Header position in fixed top
+      - Sidebar is fixed
+         - Sidebar option as follows:
+            - Home
+            - Tickets
+         - Sidebar Collapsed by default (showing only icons)
+         - Sidebar Expands on hover to show both icons and text labels
+      - Banner is part of scroll
+   - Page 1 (Home)
+      - Create the home page content as per layout attached
+      - First column contain 'Tickets' widget and second one for 'My Service'
+   - API service
+      - Use mock json for all datas and maintain in <root>api/data folder.
+      - All json contract should be well maintained in docs folder
+      - JSON should not have any real names and email. Use test, dummy etc
+           

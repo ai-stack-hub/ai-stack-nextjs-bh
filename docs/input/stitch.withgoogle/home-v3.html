@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      :root {
+        --palette-primary-red: #d12600;
+        --palette-secondary-dark-heritage-green: #005a30;
+        --core-black: #000000;
+        --core-white: #ffffff;
+        --core-neutral-grey-10: #1a1a1a;
+        --core-neutral-grey-90: #e5e5e5;
+        --core-neutral-grey-40: #666666;
+        --core-neutral-grey-80: #cccccc;
+        --core-neutral-grey-70: #b2b2b2;
+        --core-neutral-grey-60: #999999;
+        --core-neutral-grey-50: #808080;
+        --semantic-background-primary: #ffffff;
+        --semantic-background-secondary: #f5f5f5;
+        --semantic-background-tertiary: #e5e5e5;
+        --semantic-text-primary: #1a1a1a;
+        --semantic-text-secondary: #4d4d4d;
+        --semantic-border-primary: #cccccc;
+        --semantic-border-primary-light: #e5e5e5;
+        --semantic-border-primary-dark: #666666;
+        --semantic-border-secondary: #999999;
+        --semantic-border-interactive: #1a1a1a;
+        --semantic-focus-primary: #005a30;
+        --support-success: #006938;
+        --support-success-light: #e6f0eb;
+        --support-error: #cc0000;
+        --support-error-light: #fce6e6;
+        --support-warning: #ffcc00;
+        --support-warning-light: #fff9e6;
+        --support-info: #0066cc;
+        --support-info-light: #e6f0fa;
+        --hero-banner-module-color: var(
+          --palette-secondary-dark-heritage-green
+        );
+        --palette-primary-black: #000000;
+        --palette-tertiary-dark-grey: #333333;
+        --palette-primary-green: #005a30;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--semantic-background-secondary);
+        color: var(--semantic-text-primary);
+      }
+      .text-primary {
+        color: var(--semantic-text-primary);
+      }
+      .text-secondary {
+        color: var(--semantic-text-secondary);
+      }
+      .bg-primary {
+        background-color: var(--semantic-background-primary);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <aside class="w-20 bg-primary shadow-md">
+        <div class="flex flex-col items-center py-6">
+          <div class="p-3 mb-8">
+            <span class="material-icons text-primary text-3xl">menu</span>
+          </div>
+          <nav class="flex flex-col space-y-6">
+            <a
+              class="flex flex-col items-center text-primary hover:text-[var(--palette-primary-red)]"
+              href="#"
+            >
+              <span class="material-icons">home</span>
+              <span class="text-xs">Home</span>
+            </a>
+            <a
+              class="flex flex-col items-center text-primary hover:text-[var(--palette-primary-red)]"
+              href="#"
+            >
+              <span class="material-icons">confirmation_number</span>
+              <span class="text-xs">Tickets</span>
+            </a>
+            <a
+              class="flex flex-col items-center text-[var(--core-neutral-grey-70)] hover:text-[var(--palette-primary-red)]"
+              href="#"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-[var(--semantic-background-tertiary)] mb-1"
+              ></div>
+              <span class="text-xs">...</span>
+            </a>
+            <a
+              class="flex flex-col items-center text-[var(--core-neutral-grey-70)] hover:text-[var(--palette-primary-red)]"
+              href="#"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-[var(--semantic-background-tertiary)] mb-1"
+              ></div>
+              <span class="text-xs">...</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+      <main class="flex-1 flex flex-col">
+        <header
+          class="bg-primary shadow-sm p-4 flex justify-between items-center z-10"
+        >
+          <div></div>
+          <div class="flex items-center space-x-2 cursor-pointer">
+            <div
+              class="w-7 h-7 rounded-full bg-[var(--palette-primary-green)] flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">JD</span>
+            </div>
+            <span class="font-medium text-primary">John Doe</span>
+            <span class="material-icons text-secondary">expand_more</span>
+          </div>
+        </header>
+        <div class="relative">
+          <div
+            class="bg-[var(--hero-banner-module-color)] p-6 pt-6 pb-28"
+            style="height: 30vh"
+          >
+            <h1 class="text-2xl font-bold text-white">Welcome, John</h1>
+            <p class="text-white text-sm">
+              Here is a summary of your dashboard.
+            </p>
+          </div>
+          <div class="p-8 absolute top-28 left-0 right-0">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="lg:col-span-2 space-y-8">
+                <div class="bg-primary p-6 shadow">
+                  <div
+                    class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4"
+                  >
+                    <h2 class="text-xl font-semibold text-primary">Tickets</h2>
+                    <div class="flex items-center space-x-4 w-full md:w-auto">
+                      <div class="relative w-full md:w-auto">
+                        <span
+                          class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-[var(--core-neutral-grey-60)]"
+                          >search</span
+                        >
+                        <input
+                          class="pl-10 pr-4 py-2 w-full border border-[var(--core-neutral-grey-60)] focus:outline-none focus:ring-2 focus:ring-[var(--semantic-focus-primary)] text-primary"
+                          placeholder="Search tickets..."
+                          type="text"
+                        />
+                      </div>
+                      <button
+                        class="flex items-center space-x-2 border border-transparent bg-[var(--palette-primary-black)] text-white px-4 py-2 hover:bg-opacity-90"
+                      >
+                        <span class="material-icons">filter_list</span>
+                        <span>Filter</span>
+                      </button>
+                      <button
+                        class="flex items-center space-x-2 border border-transparent bg-[var(--palette-primary-black)] text-white px-4 py-2 hover:bg-opacity-90"
+                      >
+                        <span class="material-icons">sort</span>
+                        <span>Sort</span>
+                      </button>
+                    </div>
+                  </div>
+                  <ul class="space-y-6">
+                    <li
+                      class="border-b border-[var(--semantic-border-primary-light)] pb-6"
+                    >
+                      <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-primary">
+                          Issue with login
+                        </h3>
+                        <span
+                          class="text-sm font-semibold text-[var(--support-success)] bg-[var(--support-success-light)] px-2 py-1 rounded-full"
+                          >Open</span
+                        >
+                      </div>
+                      <p class="text-sm text-secondary mb-4">
+                        User is unable to log in to their account. Receiving an
+                        "Invalid Credentials" error despite using the correct
+                        password.
+                      </p>
+                      <div
+                        class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-secondary"
+                      >
+                        <div>
+                          <p class="font-medium text-primary">Ticket ID</p>
+                          <p>TKT-001</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Priority</p>
+                          <p class="text-[var(--support-error)]">High</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Created At</p>
+                          <p>2023-10-27 09:15</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Updated At</p>
+                          <p>2023-10-27 11:30</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="border-b border-[var(--semantic-border-primary-light)] pb-6"
+                    >
+                      <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-primary">
+                          Cannot access files
+                        </h3>
+                        <span
+                          class="text-sm font-semibold text-[var(--support-success)] bg-[var(--support-success-light)] px-2 py-1 rounded-full"
+                          >Open</span
+                        >
+                      </div>
+                      <p class="text-sm text-secondary mb-4">
+                        User reports being unable to access files in the shared
+                        drive. Permission denied error is displayed.
+                      </p>
+                      <div
+                        class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-secondary"
+                      >
+                        <div>
+                          <p class="font-medium text-primary">Ticket ID</p>
+                          <p>TKT-002</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Priority</p>
+                          <p class="text-orange-500">Medium</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Created At</p>
+                          <p>2023-10-26 14:00</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Updated At</p>
+                          <p>2023-10-26 16:45</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="pb-6">
+                      <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-primary">
+                          Password reset request
+                        </h3>
+                        <span
+                          class="text-sm font-semibold text-[var(--support-error)] bg-[var(--support-error-light)] px-2 py-1 rounded-full"
+                          >Closed</span
+                        >
+                      </div>
+                      <p class="text-sm text-secondary mb-4">
+                        User requested a password reset. The reset link was sent
+                        and the user has confirmed they have successfully reset
+                        their password.
+                      </p>
+                      <div
+                        class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-secondary"
+                      >
+                        <div>
+                          <p class="font-medium text-primary">Ticket ID</p>
+                          <p>TKT-003</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Priority</p>
+                          <p class="text-yellow-500">Low</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Created At</p>
+                          <p>2023-10-24 11:20</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-primary">Updated At</p>
+                          <p>2023-10-24 11:55</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-primary p-6 shadow">
+                <h2 class="text-xl font-semibold text-primary mb-4">
+                  My Services
+                </h2>
+                <div class="space-y-2">
+                  <div
+                    class="border border-[var(--semantic-border-primary)] p-3 flex justify-between items-center cursor-pointer hover:bg-[var(--semantic-background-secondary)]"
+                  >
+                    <span class="text-primary">Google</span>
+                    <span class="material-icons text-secondary"
+                      >expand_more</span
+                    >
+                  </div>
+                  <div
+                    class="border border-[var(--semantic-border-primary)] p-3 flex justify-between items-center cursor-pointer hover:bg-[var(--semantic-background-secondary)]"
+                  >
+                    <span class="text-primary">Facebook</span>
+                    <span class="material-icons text-secondary"
+                      >expand_more</span
+                    >
+                  </div>
+                  <div
+                    class="border border-[var(--semantic-border-primary)] p-3 flex justify-between items-center cursor-pointer hover:bg-[var(--semantic-background-secondary)]"
+                  >
+                    <span class="text-primary">Microsoft</span>
+                    <span class="material-icons text-secondary"
+                      >expand_more</span
+                    >
+                  </div>
+                  <div
+                    class="border border-[var(--semantic-border-primary)] p-3 flex justify-between items-center cursor-pointer hover:bg-[var(--semantic-background-secondary)]"
+                  >
+                    <span class="text-primary">Slack</span>
+                    <span class="material-icons text-secondary"
+                      >expand_more</span
+                    >
+                  </div>
+                  <div
+                    class="border border-[var(--semantic-border-primary)] p-3 flex justify-between items-center cursor-pointer hover:bg-[var(--semantic-background-secondary)]"
+                  >
+                    <span class="text-primary">GitLab</span>
+                    <span class="material-icons text-secondary"
+                      >expand_more</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
