@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../../utils/cn';
-import { HomeIcon, TicketsIcon, MoreIcon } from '../../icons';
+import { HomeIcon, TicketsIcon } from '../../icons';
 import { NAVIGATION_ITEMS, LAYOUT_CONFIG } from '../../constants';
 
 export interface SidebarProps {
@@ -15,14 +15,14 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
       case 'tickets':
         return <TicketsIcon size={20} color="currentColor" />;
       default:
-        return <MoreIcon size={20} color="currentColor" />;
+        return null;
     }
   };
 
   return (
     <aside
       className={cn(
-        'fixed left-0 top-0 h-full bg-sidebar-bg border-r border-border transition-all duration-300 z-[999] group',
+        'fixed left-0 top-0 h-full bg-sidebar-bg border-r border-border transition-all duration-300 z-[999] group hover:w-60',
         className
       )}
       style={{ 
@@ -37,14 +37,14 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
             key={item.id}
             href={item.href}
             className={cn(
-              'flex items-center space-x-3 px-3 py-2 rounded-md transition-colors duration-200',
+              'flex items-center justify-center px-3 py-2 rounded-md transition-colors duration-200',
               'hover:bg-sidebar-hover focus:outline-none focus:ring-2 focus:ring-primary/20',
-              'group-hover:justify-start justify-center',
+              'group-hover:justify-start group-hover:space-x-3',
               item.id === 'home' && 'bg-sidebar-hover'
             )}
             aria-label={item.label}
           >
-            <span className="flex-shrink-0">
+            <span className="flex-shrink-0 flex items-center justify-center">
               {getIcon(item.icon)}
             </span>
             <span className="text-sm font-medium text-text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
@@ -52,20 +52,6 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
             </span>
           </a>
         ))}
-        
-        {/* Placeholder items for additional navigation */}
-        <div className="space-y-2 pt-4">
-          {[1, 2].map((index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center group-hover:justify-start px-3 py-2"
-            >
-              <div className="w-5 h-5 bg-text-muted rounded-full flex items-center justify-center">
-                <MoreIcon size={12} color="currentColor" />
-              </div>
-            </div>
-          ))}
-        </div>
       </nav>
     </aside>
   );

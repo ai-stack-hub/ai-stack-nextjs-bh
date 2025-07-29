@@ -26,6 +26,10 @@
   --color-text-muted: #9ca3af;
   --color-button-bg: #000000;
   --color-button-text: #ffffff;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
 }
 
 @theme inline {
@@ -75,9 +79,9 @@ body {
 
 /* Sidebar hover effect */
 .group:hover {
-  width: 15rem;
+  width: 15rem !important;
 }
 
 .group:hover + main {
-  padding-left: 15rem;
+  padding-left: 15rem !important;
 }
