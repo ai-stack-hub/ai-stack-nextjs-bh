@@ -28,6 +28,26 @@ The application follows a pixel-perfect design matching the provided layout with
 - Tickets management widget
 - Services overview widget
 
+## 🎨 Design Tools
+
+### Stitch.withgoogle
+
+**I used Stitch.withgoogle for creating the layout** of this dashboard application. Stitch.withgoogle is Google's AI-powered design-to-code tool that automatically converts visual designs into production-ready code while maintaining pixel-perfect fidelity.
+
+#### Key Benefits
+- **Design-to-Code Conversion**: Transforms design mockups into HTML, CSS, and JavaScript
+- **Design Fidelity**: Ensures pixel-perfect implementation of design specifications
+- **Design Token Generation**: Creates consistent color palettes and spacing systems
+- **Rapid Prototyping**: Accelerates the design-to-development workflow
+
+#### Design Files
+Reference design files are located in `docs/input/stitch.withgoogle/`:
+- `home-v3.html` - Generated HTML from Stitch
+- `home-v3.png` - Design mockup
+- `README.md` - Detailed design documentation
+
+*For comprehensive information about the design process, see [docs/input/stitch.withgoogle/README.md](./docs/input/stitch.withgoogle/README.md)*
+
 ## 📁 Project Structure
 
 ```
