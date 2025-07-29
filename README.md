@@ -80,6 +80,45 @@ npm run dev
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
 
+## 🌐 Deployment
+
+### GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings
+   - Navigate to "Pages" in the sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Repository Configuration**:
+   - Ensure your repository is public (or you have GitHub Pro for private repos)
+   - The workflow will automatically deploy on pushes to the `main` branch
+
+3. **Automatic Deployment**:
+   - Push to the `main` branch triggers the deployment
+   - The app will be available at: `https://<username>.github.io/ai-stack-nextjs-bh/`
+
+#### Manual Deployment:
+
+```bash
+# Build the project
+npm run build
+
+# The static files will be generated in the `out` directory
+# You can serve them locally to test:
+npx serve out
+```
+
+#### Deployment Configuration:
+
+- **Static Export**: Configured for static site generation
+- **Base Path**: Automatically set for GitHub Pages subdirectory
+- **Image Optimization**: Disabled for static export compatibility
+- **Trailing Slashes**: Enabled for consistent routing
+
 ## 📚 Documentation
 
 - [API Contracts](./docs/api-contracts.md) - JSON data structure documentation
