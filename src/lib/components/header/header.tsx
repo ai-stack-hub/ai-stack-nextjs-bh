@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, className = '' }) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 bg-header-bg text-white z-[1000] border-b border-border',
+        'fixed top-0 left-0 right-0 bg-sidebar-bg text-text-primary z-[1000] border-b border-border',
         className
       )}
       style={{ height: LAYOUT_CONFIG.header.height }}
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, className = '' }) => {
         {/* Left side - Menu button */}
         <button
           onClick={onMenuClick}
-          className="p-2 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
+          className="p-2 rounded-md hover:bg-sidebar-hover transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
           aria-label="Toggle menu"
         >
           <MenuIcon size={24} color="currentColor" />
@@ -36,13 +36,13 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick, className = '' }) => {
             </div>
             
             {/* User name */}
-            <span className="text-sm font-medium hidden sm:block">
+            <span className="text-sm font-medium text-text-primary hidden sm:block">
               {APP_CONFIG.user.name}
             </span>
             
             {/* Dropdown arrow */}
             <button
-              className="p-1 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="p-1 rounded-md hover:bg-sidebar-hover transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
               aria-label="User menu"
             >
               <ChevronDownIcon size={16} color="currentColor" />
