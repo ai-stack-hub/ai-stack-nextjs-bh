@@ -44,7 +44,7 @@ const TicketsWidget: React.FC<TicketsWidgetProps> = ({ tickets, className = '' }
   };
 
   return (
-    <div className={cn('bg-card-bg rounded-lg border border-border p-6', className)}>
+    <div className={cn('bg-card-bg border border-border p-6', className)}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-text-primary">Tickets</h2>
@@ -85,7 +85,7 @@ const TicketsWidget: React.FC<TicketsWidgetProps> = ({ tickets, className = '' }
         {filteredTickets.map((ticket) => (
           <div
             key={ticket.id}
-            className="border border-border rounded-lg p-4 hover:border-primary/30 transition-colors"
+            className="border border-border p-4 hover:border-primary/30 transition-colors"
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">

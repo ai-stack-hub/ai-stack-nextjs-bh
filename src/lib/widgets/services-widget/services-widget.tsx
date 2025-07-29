@@ -40,7 +40,7 @@ const ServicesWidget: React.FC<ServicesWidgetProps> = ({ services, className = '
   };
 
   return (
-    <div className={cn('bg-card-bg rounded-lg border border-border p-6', className)}>
+    <div className={cn('bg-card-bg border border-border p-6', className)}>
       {/* Header */}
       <div className="mb-6">
         <h2 className="text-xl font-semibold text-text-primary">My Services</h2>
@@ -54,7 +54,7 @@ const ServicesWidget: React.FC<ServicesWidgetProps> = ({ services, className = '
           return (
             <div
               key={service.id}
-              className="border border-border rounded-lg overflow-hidden"
+              className="border border-border overflow-hidden"
             >
               {/* Service Header */}
               <button
