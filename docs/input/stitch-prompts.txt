@@ -1,0 +1,22 @@
+ - Application layout
+      - Header position is fixed top
+	- Notification and User-profile icon in right side
+      - Sidebar is fixed
+         - Sidebar option as follows:
+            - Home
+            - Tickets
+         - Sidebar Collapsed by default (showing only icons)
+      - Banner
+	- Banner position is below header
+	- Banner is part of scroll
+	- Backgorund color is #005a30
+	- Banner should show the welcome message in the left side. 
+      - Widgets
+	- Two columns layout undernath the banner (Column 1 is span7 and Column 2 is span5)
+	- Column one should contain ticket info list
+	- Column two should have a accordion whth service names
+	- Widget background is white
+	- Widget overlap the banner 5% 
+	- Gentle box shadow for widgets
+- Common styles
+	- No border radius for any box
