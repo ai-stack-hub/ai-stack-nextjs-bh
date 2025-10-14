@@ -1,57 +1,58 @@
-- Application layout
-  - Header position is fixed top
-		- Notification and User-profile icon in right side of the header
-      - Profile icon should be circle with user initials
-      - Notification icon should have a badge to show unread notification count
-		- Header background color is #fff
-	- Sidebar is fixed
-		- Sidebar option as follows:
-			- Home
-			- Tickets
-    - Side bar option should align with the top of the content area (or banner)
-    - A logo in the top of the sidebar align with the header
-    - Sidebar Collapsed by default (showing only icons)
-		- Sidebar background color is #fff
-	- Banner
-		- Banner position is below header
-		- Banner is part of scroll
-		- Backgorund color is #005a30
-		- Banner should show the welcome message in the left side.
-  - Content area (container wrap)
-    - Widgets
-      - Two columns layout undernath the banner (Column 1 is span7 and Column 2 is span5)
-      - Column one should contain ticket info list
-        - Widget title is 'Open actions'
-        - Add two button in the right of the ticket widget title
-          - First button is 'Add ticket' with plus icon
-          - Second button is 'Filter' with funal icon
-        - Ticket list should have the following details:
-          - Ticket ID
-          - Ticket Title
-          - Ticket Description
-          - Ticket Status
-          - Ticket Priority
-          - Ticket Created At
-          - Ticket Updated At
-      - Column two should have a accordion whth service names
-        - Each service should have the following details:
-          - Service Name
-          - Service Icon
-          - Service Description
-          - Service Status
-        - The list Should be in accrodian and each group head title should be clickable and it should expand the list (accrodian) for example:
-          - Google
-            - Google Service 1
-            - Google Service 2
-            - Google Service 3
-          - Facebook
-            - Facebook Service 1
-            - Facebook Service 2
-            - Facebook Service 3
-      - Gentle box shadow for widgets
-    - Widget(Container wrap) overlap the banner 5% (margin: -10%)
-- Common styles
-	- No border radius for any box
-  - All button color is #222222
-  - All Widget background is #fff
-  - All icons color is #222222
+# Application layout
+   ## Header 
+      ### Header position is fixed top
+		### Notification and User-profile icon in right side of the header
+      ### Profile icon should be circle with user initials
+      ### Notification icon should have a badge to show unread notification count
+		### Header background color is #fff
+	## Sidebar 
+      ### Sidebar is fixed
+		### Sidebar option as follows:
+			#### Home
+			#### Tickets
+      ### Side bar option should align with the top of the content area (or banner)
+      ### A logo in the top of the sidebar align with the header
+      ### Sidebar Collapsed by default (showing only icons)
+		### Sidebar background color is #fff
+	## Banner
+		### Banner position is below header
+		### Banner is part of scroll
+		### Backgorund color is #005a30
+		### Banner should show the welcome message in the left side.
+   ## Content area (container wrap)
+      ### Widgets
+         #### Two columns layout undernath the banner (Column 1 is span7 and Column 2 is span5)
+         #### Column one should contain ticket info list
+            ##### Widget title is 'Open actions'
+            ##### Add two button in the right of the ticket widget title
+               ###### First button is 'Add ticket' with plus icon
+               ###### Second button is 'Filter' with funal icon
+            ##### Ticket list should have the following details:
+               ###### Ticket ID
+               ###### Ticket Title
+               ###### Ticket Description
+               ###### Ticket Status
+               ###### Ticket Priority
+               ###### Ticket Created At
+               ###### Ticket Updated At
+            ##### Status and Priority shoulbe in chip (not buttons)
+         #### Column two should have a accordion whth service names
+            ##### Each service should have the following details:
+               ###### Service Name
+               ###### Service Icon
+               ###### Service Description
+               ###### Service Status
+            ##### The list Should be in accrodian and each group head title should be clickable and it should expand the list (accrodian) for example:
+               ###### Google
+                  ####### Google Service 1
+                  ####### Google Service 2
+               ###### Facebook
+                  ####### Facebook Service 1
+                  ####### Facebook Service 2
+         #### Gentle box shadow for widgets
+         #### Widget(Container wrap) overlap the banner 5% (margin: -10%)
+# Common styles
+   ## No border radius for any box
+   ## All button color is #222222
+   ## All Widget background is #fff
+   ## All icons color is #222222
